@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSTITUTIONS</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+ 
+      
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 250px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ff750f;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #000;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #ff750f;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+.main{
+    width:auto;
+    background-image:url('https://cdn.dribbble.com/users/3050354/screenshots/14646894/gif2.gif');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+</style>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CareerGeeks</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="homepage.html">HOME</homepage></a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="schemes.html">SCHEMES</a></li>
+                    <li><a href="institution.html">INSTITUTIONS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>  
+        </div>
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="ssc.html">10th SSC</a>
+            <a href="arts.html">12th Arts</a>
+            <a href="science.html">12th science</a>
+            <a href="commerce.html">12th Commerce</a>
+          </div>          
+          <button class="openbtn" onclick="openNav()">☰</button>  
+          <script>
+          function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+          }
+          </script>          
+    </div> 
+</body>

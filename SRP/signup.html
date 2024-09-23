@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CareerGeeks</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="homepage.html">HOME</homepage></a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="schemes.html">SCHEMES</a></li>
+                    <li><a href="institution.html">INSTITUTIONS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>  
+    <div class="container">
+        <label for="uname"><b>Name</b></label>
+        <input type="text" placeholder="Enter Name" name="uname" id="uname" required>
+
+        <label for="uemail"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="uemail" id="uemail" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+        <button type="submit">Sign Up</button>
+    </div>
+    <script>
+        var button = document.querySelector('button[type=submit]');
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            var name = document.getElementById('uname').value;
+            var email = document.getElementById('uemail').value;
+            var password = document.getElementById('psw').value;
+            var confirmPassword = document.getElementById('psw-repeat').value;
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+            } else {
+                alert('Registration successful.');
+            }
+        });
+    </script>
+</body>
+</html>

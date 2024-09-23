@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CAREER GEEKS</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CareerGeeks</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="homepage.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+
+        </div> 
+        <div class="content">
+            <h1>Education & <br><span> Career Guidance</span> </h1>
+            <p class="par">“Education is one thing no one can take away from you.”<br> 
+                <div class="form">
+                    <h2>Login Here</h2>
+                    <input type="email" name="email" placeholder="Enter Email Here">
+                    <input type="password" name="" placeholder="Enter Password Here">
+                    <a href="homepage.html"><button class="btnn">Login</button></a>
+
+                    <p class="link">Don't have an account<br>
+                    <a href="signup.html">Sign up </a> here</a></p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+ let x = document.forms["loginForm"]["email"].value;
+ let y = document.forms["loginForm"]["password"].value;
+
+ if (x == "" || y == "") {
+    alert("Please enter your email and password");
+    return false;
+ }
+
+ if (!validateEmail(x)) {
+    alert("Invalid email format");
+    return false;
+ }
+
+ if (!validatePassword(y)) {
+    alert("Password should contain at least 8 characters, including one uppercase, one lowercase, one numeric, and one special character");
+    return false;
+ }
+
+ window.location.href = "homepage.html";
+
+ return true;
+}
+
+function validateEmail(email) {
+ let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+ return re.test(String(email).toLowerCase());
+}
+
+function validatePassword(password) {
+ let re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+ return re.test(String(password));
+}
+    </script>
+</body>
+</html>
